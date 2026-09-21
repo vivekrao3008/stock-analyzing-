@@ -41,7 +41,7 @@ function Navbar() {
             </li>
 
             <li className="nav-item">
-              <a className="nav-link" href="http://localhost:3001/">
+              <a className="nav-link" href="https://stock-analyzing-g8saj02ki-vivekrao3008.vercel.app/">
                 Dashboard
               </a>
             </li>
