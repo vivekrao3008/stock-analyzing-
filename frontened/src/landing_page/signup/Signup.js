@@ -2,7 +2,8 @@ import React from "react";
 
 function Signup() {
   const handleSignup = () => {
-    window.location.href = "http://localhost:3001/signup";
+    window.location.href =
+  "https://stock-analyzing-g8saj02ki-vivekrao3008.vercel.app/signup";
   };
 
   return (
