@@ -2,7 +2,7 @@ import React from "react";
 
 function Signup() {
   const handleSignup = () => {
-    window.location.href = "http://localhost:3000/signup";
+    window.location.href = "http://localhost:3001/signup";
   };
 
   return (
