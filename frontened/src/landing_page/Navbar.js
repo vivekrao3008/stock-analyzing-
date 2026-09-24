@@ -12,8 +12,8 @@ function Navbar() {
         <Link className="navbar-brand" to="/">
           <img
             src="/media/images/logo.svg"
-            style={{ width: "25%" }}
-            alt="Logo"
+            style={{ width: "130px" }}
+            alt="Zerodha Logo"
           />
         </Link>
 

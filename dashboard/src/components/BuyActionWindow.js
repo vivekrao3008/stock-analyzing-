@@ -12,12 +12,19 @@ const BuyActionWindow = ({ uid }) => {
   const [stockPrice, setStockPrice] = useState(0.0);
 
   const handleBuyClick = () => {
-    axios.post("http://localhost:3002/newOrder", {
-      name: uid,
-      qty: stockQuantity,
-      price: stockPrice,
-      mode: "BUY",
-    });
+    const API_BASE_URL =
+      process.env.REACT_APP_API_URL || "https://stock-analyzing-njde.vercel.app";
+
+    axios
+      .post(`${API_BASE_URL}/newOrder`, {
+        name: uid,
+        qty: Number(stockQuantity),
+        price: Number(stockPrice),
+        mode: "BUY",
+      })
+      .catch((err) => {
+        console.error("Error creating order:", err);
+      });
 
     GeneralContext.closeBuyWindow();
   };

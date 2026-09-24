@@ -9,8 +9,11 @@ const Holdings = () => {
   const [allHoldings, setAllHoldings] = useState([]);
 
   useEffect(() => {
+    const API_BASE_URL =
+      process.env.REACT_APP_API_URL || "https://stock-analyzing-njde.vercel.app";
+
     axios
-      .get("https://stock-analyzing-njde.vercel.app/allHoldings")
+      .get(`${API_BASE_URL}/allHoldings`)
       .then((res) => {
         // console.log(res.data);
         setAllHoldings(res.data);

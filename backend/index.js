@@ -79,6 +79,24 @@ app.get("/allPositions", async (req, res) => {
   }
 });
 
+// Get all orders
+app.get("/allOrders", async (req, res) => {
+  try {
+    await connectDB();
+
+    const allOrders = await OrdersModel.find({});
+
+    res.status(200).json(allOrders);
+  } catch (error) {
+    console.error("Orders Error:", error.message);
+
+    res.status(500).json({
+      error: "Failed to fetch orders",
+      message: error.message,
+    });
+  }
+});
+
 // Create a new order
 app.post("/newOrder", async (req, res) => {
   try {
